@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Audio and Video Embedding</title>
+    <link rel="stylesheet" href="../fontstyles.css">
+    <style>
+        html {
+            text-align: center;
+        }
+        audio, video {
+            display: block;
+            margin: 10px auto;
+        }
+        video {
+            border-radius: 3rem;
+            margin-top: 2rem;
+            padding: 1rem;
+            box-sizing: border-box;
+            width: 80vw;
+            max-width: 1000px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Audio and Video Embedding</h1>
+    <h2>Audio</h2>
+    <p>Arabesque by Claude Debussy: A quintessential piece by the French classical composer, marked by its fluid melodies and luminous harmonies.</p>
+    <audio controls>
+        <source src="../assets/audio/arabesque.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <h2>Video</h2>
+    <p>Sun shining over plants: Golden light spills onto the leaves, painting the still life with warmth and quiet vitality.</p>
+    <video controls>
+        <source src="../assets/videos/plants_sunny.mp4" type="video/mp4">
+        Your browser does not support the video element.
+    </video>
+</body>
+</html>
+
+<!-- 
+NOTES
+The <audio> tag is used to embed sound content. It includes the 'controls' boolean attribute to show play/pause controls. Inside <audio>, the <source> tag specifies the audio file using 'src' (source URL) and 'type' (MIME type, e.g., 'audio/mpeg' for MP3 format). A fallback text is provided for browsers that don't support the audio element.
+
+The <video> tag is used to embed video content. It also uses the 'controls' attribute to display playback controls. Inside <video>, the <source> tag defines the video file using 'src' and 'type' (e.g., 'video/mp4'). A fallback message is shown if the video can't be displayed.
+-->

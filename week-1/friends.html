@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../fontstyles.css">
+    <title>Friends</title>
+    <style>
+      img {
+        height: 150px;
+        width: 150px;
+      }
+      div {
+        display: flex; /* makes the div a flex container, its direct children become flex items */
+        flex-flow: row wrap; /* specifies the direction as well as if the container should wrap its items */
+        /* flex-flow is shorthand for flex-direction and flex-wrap */
+        /* values: flex-direction
+           row: default, specifies that the items are placed horizontally
+           column: will place them vertically
+           row-reverse: items are placed horizontally in reverse order
+           column-reverse: items are placed vertically in reverse order */
+        /* values: flex-wrap
+           wrap: specifies that the items must wrap to next line if not enough space
+           nowrap: says the items will always be in one line, if they don't fit they'll overflow
+           wrap-reverse: the items wrap to next line but the order is reversed */
+        /* the items inside the div are friends [with image and caption] as one unit */
+      }
+      figure {
+        display: flex;
+        flex-direction: column; /* specifies that the items within figure (img and figcaption) should be arranged vertically */
+        align-items: center; /* aligns items along the cross axis (horizontal for column layout) */
+        margin: 10px;
+        text-align: center;
+        /* values: align-items
+           stretch: stretched across cross axis to fill the container
+           flex-start: start of cross axis
+           flex-end: end of cross axis
+           baseline: at their baselines
+           inherit: from parent element */
+        /* the items inside the figure are the image and the caption, which need to be stacked vertically */
+      }
+      figcaption {
+        margin-top: 5px;
+        font-size: 0.9em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Friends</h1>
+    <div>
+      <figure>
+        <figcaption>Usha Sree Poola</figcaption>
+        <a href="https://www.linkedin.com/in/ushasree-poola/"><img src="../assets/images/usha.jpg" alt="Usha Sree Poola"></a>
+      </figure>
+      <figure>
+        <figcaption>Dishoja K</figcaption>
+        <a href="https://www.linkedin.com/in/dishoja/"><img src="../assets/images/dishoja.jpg" alt="Dishoja K"></a>
+      </figure>
+      <figure>
+        <figcaption>Selvi Sohitha T</figcaption>
+        <a href="https://www.linkedin.com/in/selvi-sohitha-1970ab323/"><img src="../assets/images/sohitha.jpg" alt="Selvi Sohitha T"></a>
+      </figure>
+    </div>
+  </body>
+</html>

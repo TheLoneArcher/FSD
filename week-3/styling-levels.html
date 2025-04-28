@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Styling Levels in HTML</title>
+    <link rel="stylesheet" href="fontstyles.css
+    ">
+    <style>
+        header {
+            background-color: #005054;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: rgb(64, 5, 115);
+        }
+        .highlight {
+            background: rgba(255, 253, 136, 0.594);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header style="font-family: Arial;">
+        <h1>Styling in HTML</h1>
+        <p style="font-size: 20px;">Inline, Internal, and External Styles</p>
+    </header>
+    <main>
+        <section>
+            <h2>Inline Styles</h2>
+            <p style="color: rgb(0, 68, 0);">This paragraph is styled using inline styles. The text color is green.</p>
+        </section>
+        <section>
+            <h2>Internal Styles</h2>
+            <p>This paragraph is styled using internal styles. It inherits styles from the <code>p</code> selector defined in the <code>&lt;style&gt;</code> tag.</p>
+            <p class="highlight">This paragraph uses a class selector for additional styling.</p>
+        </section>
+    </main>
+    <footer>
+        <p>Styling applied using external styles is visible here.</p>
+    </footer>
+    <link rel="stylesheet" href="../fontstyles.css">
+</body>
+</html>
+
+<!-- 
+NOTES 
+External CSS is implemented by using link tag with rel="stylesheet" attribute and href="styles.css" tags
+
+Internal CSS is implemented using the style tag and enclosing the CSS code within
+
+Inline CSS is implemented using style="selector { property: value; }"
+-->

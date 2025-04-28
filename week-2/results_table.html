@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>II - I Results</title>
+    <link rel="stylesheet" href="../fontstyles.css">
+    <style>
+        caption {
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 90%;
+            margin: 1em auto;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 0.5em;
+            text-align: center;
+        }
+
+        th {
+            background-color: rgb(244, 126, 117);
+            color: whitesmoke;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: rgb(227, 227, 227);
+        }
+        .student {
+            text-shadow: 1px 1px 2px #333; 
+            /* 1px right, 1px down, 2px blur, dark gray */
+            color: whitesmoke;
+            font-size: 1.1em;
+            width: 90%;
+            display: flex;
+            gap: 1em;
+            height: 25vh;
+            margin: 1em auto;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+            align-items: center;background-color: rgb(244, 126, 117);
+            border-radius: 1em;
+            overflow:hidden;
+            border: 1px solid black;
+        }
+        img {
+            height: 20vh;
+            width: auto;
+            border-radius: 1em;
+            margin: 0.8rem;
+            border: 1.3px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Student Details</h1>
+    <section class="student">
+        <div class="details">
+            <p><strong>Name: </strong>Usha Sree Poola<br></p>
+            <p><strong>Roll Number: </strong>23AK1A3646<br></p>
+            <p><strong>Results: </strong>II-I</p>
+            <p><strong>CGPA: </strong>9.2<br></p>
+        </div>
+        <img src="../assets/images/usha.jpg" alt="student photo" width="100px" height="auto">
+    </section>
+    <table>
+        <caption>II - I Results</caption>
+        <thead>
+            <tr>
+                <th>Sno</th>
+                <th>SubCode</th>
+                <th>Subject Name</th>
+                <th>Int</th>
+                <th>Ext</th>
+                <th>Total</th>
+                <th>Final Grade</th>
+                <th>Credits</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>23ABS9903</td>
+                <td>Engineering Physics</td>
+                <td>28</td>
+                <td>56</td>
+                <td>84</td>
+                <td>A</td>
+                <td>3.00</td>
+                <td>PASS</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>23ABS9905</td>
+                <td>DEVC</td>
+                <td>30</td>
+                <td>68</td>
+                <td>98</td>
+                <td>S</td>
+                <td>3.00</td>
+                <td>PASS</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>23AES0201</td>
+                <td>BEEE & BECE</td>
+                <td>30</td>
+                <td>51</td>
+                <td>81</td>
+                <td>A</td>
+                <td>3.00</td>
+                <td>PASS</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>23AES0301</td>
+                <td>Engineering Graphics</td>
+                <td>30</td>
+                <td>69</td>
+                <td>99</td>
+                <td>S</td>
+                <td>3.00</td>
+                <td>PASS</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>23AES0503</td>
+                <td>IT Workshop</td>
+                <td>30</td>
+                <td>70</td>
+                <td>100</td>
+                <td>S</td>
+                <td>1.00</td>
+                <td>PASS</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>23APC0501</td>
+                <td>Data Structures</td>
+                <td>30</td>
+                <td>52</td>
+                <td>82</td>
+                <td>A</td>
+                <td>3.00</td>
+                <td>PASS</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>23ABS9908</td>
+                <td>Engineering Physics Lab</td>
+                <td>30</td>
+                <td>56</td>
+                <td>86</td>
+                <td>A</td>
+                <td>1.00</td>
+                <td>PASS</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>23AES0202</td>
+                <td>EEE Workshop</td>
+                <td>28</td>
+                <td>67</td>
+                <td>95</td>
+                <td>S</td>
+                <td>1.50</td>
+                <td>PASS</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>23APC0502</td>
+                <td>Data Structures Lab</td>
+                <td>28</td>
+                <td>70</td>
+                <td>98</td>
+                <td>S</td>
+                <td>1.50</td>
+                <td>PASS</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>23AHM9904</td>
+                <td>NSS</td>
+                <td>50</td>
+                <td>0</td>
+                <td>50</td>
+                <td>S</td>
+                <td>0.50</td>
+                <td>PASS</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

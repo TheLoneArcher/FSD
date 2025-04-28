@@ -1,0 +1,22 @@
+/* Define Nunito Sans font */
+@font-face {
+  font-family: "Nunito Sans"; /* Choose 'Nunito Sans' as the font family name */
+  src: url("../assets/fonts/NunitoSans.ttf") format("truetype"); /* Specify the path and format */
+  font-weight: normal; /* Assuming this is the regular weight */
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Libre Baskerville";
+  src: url("../assets/fonts/LibreBaskerville.ttf") format("truetype"); 
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Libre Baskerville", "Nunito Sans", "Verdana", "Arial";
+}
+html {
+  font-family: "Nunito Sans", "Verdana", "Arial";
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="formstyles.css">
+    <link rel="stylesheet" href="../fontstyles.css">
+</head>
+<body>
+    <h1>Heading</h1>
+    <fieldset>
+        <legend>Input</legend>
+        <form action="">
+            <table>
+                <tr>
+                    <th>Description</th>
+                    <th>Input</th>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="name">Name</label>
+                    </td>
+                    <td>
+                        <input type="text" id="name" name="name">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email">Email</label>
+                    </td>
+                    <td>
+                        <input type="text" id="email" name="email">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="phone">Phone</label>
+                    </td>
+                    <td>
+                        <input type="number" id="phone" name="phone">
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <button onclick="validateForm()">Submit</button>
+        <div id="result"></div>
+    </fieldset>
+    <script>
+        function validateForm() {
+            const name = document.getElementById("name").value, nameRegex = /^[A-Za-z]+[a-zA-z0-9 ]{5,}$/;
+            const email = document.getElementById("email").value, emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // not the end so +
+            const phone = document.getElementById("phone").value, phoneRegex = /^[0-9]{10}$/;
+            let resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = "";
+            if (!name || !email || !phone) {
+                window.alert("Enter all the values and try again.");
+                return;
+            }
+            if (!nameRegex.test(name)) {
+                resultDiv.innerHTML += "Name Invalid<br>";
+            } 
+            if (!emailRegex.test(email)) {
+                resultDiv.innerHTML += "Email Invalid<br>";
+            }
+            if (!phoneRegex.test(phone)) {
+                resultDiv.innerHTML += "Phone Number Invalid<br>";
+            }
+            if (nameRegex.test(name) && emailRegex.test(email) && phoneRegex.test(phone)) {
+                resultDiv.innerHTML += "Form Valid.<br>";
+            }
+        }
+    </script>
+</body>
+</html>

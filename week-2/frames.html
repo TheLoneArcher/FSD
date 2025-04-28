@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Frames Example</title>
+    </head>
+    <body>
+        <img
+            src="../assets/images/usha.jpg"
+            alt="usha"
+            width="60%"
+            height="50%"
+            style="margin: 1rem auto; display: block"
+        />
+        <iframe
+            src="results_table.html"
+            title="results"
+            width="100%"
+            height="70%"
+        >
+            <p>Welcome to the Results Page</p>
+        </iframe>
+        <iframe
+            src="../week-1/hyperlinks.html"
+            width="100%"
+            height="40%"
+        ></iframe>
+        <noscript>
+            <p>
+                This page uses iframes, but your browser has JavaScript disabled
+                or doesn't support iframes properly.
+            </p>
+        </noscript>
+    </body>
+</html>
+
+<!-- 
+NOTES
+first, an image with src, alt, width, height and style:center and display-block is created
+next, an iframe with some table is linked with src, title is set to some name, width and height are set
+
+another iframe with height and width are set
+
+noscript is a tag that runs if the browser has javascript disabled
+  -->

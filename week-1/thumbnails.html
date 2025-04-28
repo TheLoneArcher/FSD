@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thumbnails</title>
+    <style>
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            /* values: flex-wrap
+           wrap: specifies that the items must wrap to next line if not enough space
+           nowrap: says the items will always be in one line, if they don't fit they'll overflow
+           wrap-reverse: the items wrap to next line but the order is reversed
+         */
+            height: 80vh;
+            gap: 2em;
+
+            /* values: justify-content - main axis
+           center: Centers items horizontally
+           flex-start: Items aligned to the start (default)
+           flex-end: Items aligned to the end
+           space-between: Evenly distributes space between items
+           space-around: Evenly distributes space around items
+           space-evenly: Evenly distributes space around each item
+         */
+            justify-content: space-evenly;
+
+            /* values: align-items - cross axis
+           center: Centers items vertically (if they span multiple lines)
+           stretch: Stretches items vertically to fill the container (default)
+           flex-start: Items aligned to the top
+           flex-end: Items aligned to the bottom
+         */
+            align-items: center;
+        }
+    </style>
+    <link rel="stylesheet" href="../fontstyles.css">
+</head>
+
+<body>
+    <h1>Setting Thumbnails of Fixed Size</h1>
+    <div class="gallery">
+        <a href="../assets/images/usha.jpg">
+            <img src="../assets/images/usha.jpg" alt="Usha Sree Poola" height="100px" width="100px" />
+        </a>
+        <a href="../assets/images/dishoja.jpg">
+            <img src="../assets/images/dishoja.jpg" alt="Dishoja K" height="100px" width="100px" />
+        </a>
+        <a href="../assets/images/sohitha.jpg">
+            <img src="../assets/images/sohitha.jpg" alt="Selvi Sohitha T" height="100px" width="100px" />
+        </a>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../fontstyles.css" />
+    <title>Weekly Class Timetable</title>
+    <style>
+      body {
+        background-color: #f8f9fa;
+        text-align: center;
+        padding: 20px;
+        overflow-x: auto; /* Enable horizontal scrolling for the body */
+        display: flex;        /* Use flexbox for centering */
+        justify-content: center; /* Center content horizontally */
+        align-items: flex-start; /* Align items to the start (top) */
+        min-height: 100vh;    /* Ensure full viewport height */
+      }
+      table {
+        word-break: keep-all;
+        white-space: nowrap;
+        max-width: 80%;
+        border-collapse: collapse;
+        background-color: #ffffff;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;      /* Add margin above the table */
+      }
+      caption {
+        font-size: 1.4em;
+        font-weight: bold;
+        padding: 4px;
+        background-color: #58a3f4;
+        color: white;
+        width: 90vw;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 5px;
+        text-align: center;
+      }
+      th {
+        background-color: #a6d0fd;
+        color: white;
+      }
+      td {
+        background-color: #f1f1f1;
+      }
+      tr:nth-child(even) td {
+        background-color: #e9ecef;
+      }
+      td:first-child {
+        font-weight: bold;
+      }
+      td[rowspan] {
+        font-weight: bold;
+      }
+      td[colspan] {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <caption>Class Timetable for II CIC - Section-1</caption>
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>09:30-10:20</th>
+          <th>10:20-11:10</th>
+          <th>11:10-12:00</th>
+          <th>12:00-12:50</th>
+          <th>12:50-01:50</th>
+          <th>01:50-02:40</th>
+          <th>02:40-03:30</th>
+          <th>03:30-04:20</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Monday</td>
+          <td>NTA</td>
+          <td>CN</td>
+          <td>MEFA</td>
+          <td>DTI</td>
+          <td rowspan="6">LUNCH</td>
+          <td>CN-CLC</td>
+          <td>OS</td>
+          <td>COUNS</td>
+        </tr>
+        <tr>
+          <td>Tuesday</td>
+          <td>DTI</td>
+          <td>MEFA</td>
+          <td>DBMS</td>
+          <td>CN</td>
+          <td>NTA</td>
+          <td>OS</td>
+          <td>DTI-CLC</td>
+        </tr>
+        <tr>
+          <td>Wednesday</td>
+          <td>CN</td>
+          <td colspan="3">DBMS LAB</td>
+          <td>NTA-CLC</td>
+          <td>DTI</td>
+          <td>OS</td>
+        </tr>
+        <tr>
+          <td>Thursday</td>
+          <td>MEFA</td>
+          <td>DBMS</td>
+          <td>NTA</td>
+          <td>OS-CLC</td>
+          <td>DBMS-CLC</td>
+          <td>NTA</td>
+          <td>CN</td>
+        </tr>
+        <tr>
+          <td>Friday</td>
+          <td>DBMS</td>
+          <td>OS</td>
+          <td>DBMS</td>
+          <td>MEFA</td>
+          <td colspan="3">FSD - 1</td>
+        </tr>
+        <tr>
+          <td>Saturday</td>
+          <td colspan="4">CN & OS LAB</td>
+          <td>OS</td>
+          <td>DTI</td>
+          <td>MEFA</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

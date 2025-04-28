@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculation</title>
+    <link rel="stylesheet" href="formstyles.css">
+    <link rel="stylesheet" href="../fontstyles.css">
+</head>
+<body>
+    <h1>Combined Program</h1>
+    <fieldset>
+        <legend>Input</legend>
+        <caption>Factorial, Fibonacci,  Primes, and Palindrome Checker</caption>
+        <form action="">
+            <table>
+                <tr>
+                    <th>Description</th>
+                    <th>Input</th>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="input">Enter a Number</label>
+                    </td>
+                    <td>
+                        <input type="number" id="input" name="input" min="1" max="1000">
+                    </td>
+                </tr>
+            </table>
+            <div class="answer"></div>
+        </form>
+        <button onclick="routine()">Submit</button>
+    </fieldset>
+    <fieldset class="result">
+        <legend>Result</legend>
+        <div id="result"></div>
+    </fieldset>
+    <script>
+        function factorial(num, resultDiv) {
+            let factorial = 1;
+            for (let i = 1; i <= num; i++) factorial *= i;
+            resultDiv.innerHTML = `Factorial: ${factorial}<br>`;
+        }
+        function isPrime(n) {
+            if (n < 2) return false;
+            for (let i = 2; i < Math.sqrt(n); i++) if (n % i == 0) return false;
+            return true;
+        }
+        function primesTillN(num, resultDiv) {
+            let primesFound = false;
+            resultDiv.innerHTML += `Primes Until ${num}: <br>`;
+            for (let i = 1; i < num; i++) {
+                if (isPrime(i)) {
+                    resultDiv.innerHTML += `${i} `;  
+                    primesFound = true;
+                }
+            }
+            if (!primesFound) resultDiv.innerHTML += "No Primes Found";
+            resultDiv.innerHTML += "<br>";
+        }
+        function fibTerm(num, resultDiv) {
+            resultDiv.innerHTML += `Fibonacci Term ${num}: `;
+            if (num == 1 || num == 0) resultDiv.innerHTML += `${num}<br>`;
+            else {
+                let a = 0, b = 1, fib = 0;
+                for (i = 2; i <= num; i++) {
+                    fib = a + b;
+                    a = b;
+                    b = fib;
+                } 
+                resultDiv.innerHTML += `${fib}<br>`;
+            }
+        }
+        function isPalindrome(num, resultDiv) {
+            resultDiv.innerHTML += "Palindrome: ";
+            if (String(num) == String(num).split('').reverse().join('')) resultDiv.innerHTML += "Yes <br>";
+            else resultDiv.innerHTML += "No <br>"
+        }
+        function routine() {
+            const num = parseInt(document.getElementById("input").value);
+            let resultDiv = document.getElementById("result");
+            let resultFieldset = document.querySelector(".result");
+            resultFieldset.style.display = 'block';
+            factorial(num, resultDiv);
+            fibTerm(num, resultDiv);
+            primesTillN(num, resultDiv);
+            isPalindrome(num, resultDiv);
+        }
+    </script>
+</body>
+</html>

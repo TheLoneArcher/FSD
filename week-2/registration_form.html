@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="../fontstyles.css">
+    <style>
+        table, td, th {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form action="#" method="post">
+        <table>
+            <tr>
+                <th>
+                    <label for="name">Full Name</label>
+                </th>
+                <td>
+                    <input type="text" name="name" id="name"  required>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="password">Password</label>
+                </th>
+                <td>
+                    <input type="password" name="password" id="password"  required>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="age">Age</label>
+                </th>
+                <td>
+                    <input type="number" min="13" max="150" id="age" name="age"  required>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="dob">Date of Birth</label>
+                </th>
+                <td>
+                    <input type="date" id="dob" name="dob" required>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="gender">Gender</label>
+                </th>
+                <td>
+                    <input type="radio" name="gender" id="male" value="male"> <label for="male">Male</label>
+                    <input type="radio" name="gender" id="female" value="female"> <label for="female">Female</label>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="hobbies">Hobbies</label>
+                </th>
+                <td>
+                    <input type="checkbox" name="hobbies" id="reading" value="reading"> <label for="reading">Reading</label>
+                    <input type="checkbox" name="hobbies" id="sports" value="sports"> <label for="sports">Sports</label>
+                    <input type="checkbox" name="hobbies" id="music" value="music"> <label for="music">Music</label>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="country">Country</label>
+                </th>
+                <td>
+                    <select name="country" id="country" required>
+                        <option value="">Select a Country</option>
+                        <option value="UK">UK</option>
+                        <option value="US">US</option>
+                        <option value="India">India</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="address">Address</label>
+                </th>
+                <td>
+                    <textarea name="address" id="address" placeholder="Enter your address here"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:center;">
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
+
+<!-- 
+NOTES:
+<form> creates a form that allows users to give input to the website and submit it to the backend. It acts as a container for text, password, radio, checkboxes, file uploads.
+
+action attribute of the form tag is the url where the data is sent when form is submitted
+
+cellspacing is the attribute that definces the space between borders of different table cells. 0 means there's no space between cells, forming a single table.
+
+cellpadding defines the space between the content and cell border, it just adds padding without css.
+
+<label for="inputId">Label Text</label>
+here, for specifies the "ID" of the input element, clicking the label focuses the input.
+
+<input type="inputType" id="someId" name="someName" value="initialValue" [other attributes]>
+type is fundamental and it defines the type of input that is to be received through the attribute-values: input[type] 
+    text: single line text field
+    password: character maks
+    number: numeric values
+    date: selecting dates
+    radio: allows one option
+    checkbox: multiple options
+    submit: submits the form
+    reset: resets the form
+    email: for email
+    url: for urls
+id: identifier, needed for the label
+name: name of the input control when submitting the data to the server, server side script identifies the value using this name
+value: initial value of the input field, the value submitted if nothing entered, in other words, it's the default value
+required: it's required
+placeholder: expected input
+min, max for number and date
+rows, cols for <textarea>
+
+to make sure only one radio button can be selected, they must share the same name value, but different value and id attributes for differentiation. [SAME NAME DIFFERENT VALUE&ID]
+
+fieldset is a container that's a group of related form elements.
+the caption in fieldset is called legend
+-->

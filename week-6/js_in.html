@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../fontstyles.css">
+    <title>Javascript Input</title>
+    <link rel="stylesheet" href="basicbuttonstyles.css">
+</head>
+<body>
+    <h1>Javascript Input Methods</h1>
+    <label for="gEBI">Input: </label>
+    <input type="text" id="gEBI" name="gEBI">
+    <main>
+        <button onclick="getPrompt()">prompt()</button>
+        <button onclick="gEBI()">gEBI</button>
+        <button onclick="gEBC()">gEBC</button>
+        <button onclick="qselector()">querySelector</button>
+        <button onclick="eventListener()">addEventListener</button>
+    </main>
+    <p id="demo" class="class"></p>
+    <p class="class"></p>
+    <script> 
+        function getPrompt() {
+            let name = prompt("Enter your name");
+            if (name) {
+                document.getElementById("demo").innerHTML = `Hello, ${name}. Howdy!`;
+            }
+        }
+        function gEBI() {
+            let val = document.getElementById("gEBI").value;
+            document.getElementById("demo").innerHTML = `Value Entered: ${val}`;
+        }
+        function gEBC() {
+            let paras = document.getElementsByClassName("class");
+            paras[0].innerHTML = "Hello World!";
+            paras[1].innerHTML = "Hello World 2!";
+        }
+        function qselector() {
+            document.querySelector(".class").style.backgroundColor = "cyan";
+        }
+        function eventListener() {
+            document.addEventListener("click", function () {
+                document.getElementById('demo').innerHTML += 'Hello, World!<br>';
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Student Marks and Grades</title>
+        <link rel="stylesheet" href="../fontstyles.css" />
+    </head>
+    <body>
+        <h1>Student Marks and Grades</h1>
+        <table border="1px solid black;">
+            <tr >
+                <th rowspan="2">Name</th>
+                <!-- spans two rows, so next row this column doesn't need any value -->
+                <th colspan="2">Marks</th>
+                <!-- spans two columns  so next column no need, it takes the space of two columns -->
+                <th rowspan="2">Grade</th>
+            </tr>
+            <tr>
+                <th>Operating System</th>
+                <th>Data Base Management System</th>
+            </tr>
+            <tr>
+                <td>John</td>
+                <td>85</td>
+                <td>90</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>Jane</td>
+                <td>78</td>
+                <td>82</td>
+                <td>B</td>
+            </tr>
+            <tr>
+                <td>Sam</td>
+                <td>92</td>
+                <td>88</td>
+                <td>A</td>
+            </tr>
+        </table>
+    </body>
+</html>

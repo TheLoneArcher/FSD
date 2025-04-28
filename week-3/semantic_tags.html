@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HTML Semantic Tags Example</title>
+    <link rel="stylesheet" href="../fontstyles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Website</h1>
+        <nav>
+            <a href="#home">Home</a> |
+            <a href="#about">About</a> |
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h2>About Semantic HTML</h2>
+            <p>
+                Semantic HTML5 tags provide meaning to the structure of web pages. For example,
+                <span>&lt;article&gt;</span> is used to represent standalone content.
+            </p>
+        </section>
+        <article>
+            <header>
+                <h2>Blog Post: Understanding HTML5 Tags</h2>
+                <p>Posted by John Doe | January 28, 2025</p>
+            </header>
+            <p>HTML5 introduces a variety of new tags that make it easier to structure and describe your content.</p>
+            <figure>
+                <img src="../assets/images/html5.jpg" alt="HTML5 Example Image" height="300px" width="auto">
+                <figcaption>An example of HTML5 elements in use.</figcaption>
+            </figure>
+            <footer>
+                <p>Category: <a href="#web-development">Web Development</a></p>
+            </footer>
+        </article>
+        <aside>
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </aside>
+    </main>
+    <footer>
+        <p>&copy; 2025 My Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+<!-- 
+NOTES
+In the header after the h1, there's the nav tag within which there are a few links leading to different sections linked by id
+
+The main tag contains:
+    - section with heading and paragraph about html5
+    - article containing header and paragraph about html5 tags, a figure of html5 which nests figcaption and img and the footer of article has a paragraph with a hyperlink nested in it that 
+    - an aside element  containing quick links using h3 and unordered list with list items nesting the anchor elements
+
+The footer contains a paragraph that has &copy; which is a html entity that stands for copyright.
+-->
